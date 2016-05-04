@@ -14,6 +14,26 @@ public class PathValidator {
 		return false;
 	}
 	
+	public static boolean isADirectory(String filePath) {
+		Path path = null;
+		if (null != filePath) {
+			if (null != (path = Paths.get(filePath))) {
+				return (path.toFile().exists() && path.toFile().isDirectory());
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isAFile(String filePath) {
+		Path path = null;
+		if (null != filePath) {
+			if (null != (path = Paths.get(filePath))) {
+				return (path.toFile().exists() && path.toFile().isFile());
+			}
+		}
+		return false;
+	}
+	
 	private PathValidator() {}
 	
 	public String toString() { return "Path (Directory or File) Validator"; }
