@@ -1,5 +1,6 @@
 package com.gmail.ichglauben.pathvalidator.core.concretes;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -8,7 +9,7 @@ public class PathValidator {
 		Path path = null;
 		if (null != filePath) {
 			if (null != (path = Paths.get(filePath))) {
-				return (path.toFile().exists() && (path.toFile().isDirectory() || path.toFile().isFile()));
+				return (isADirectory(path.toAbsolutePath().toString()) || isAFile(path.toAbsolutePath().toString()));
 			}
 		}
 		return false;
@@ -18,7 +19,7 @@ public class PathValidator {
 		Path path = null;
 		if (null != filePath) {
 			if (null != (path = Paths.get(filePath))) {
-				return (path.toFile().exists() && path.toFile().isDirectory());
+				return (path.toFile().exists() && path.toFile().isDirectory() && Files.isWritable(path));
 			}
 		}
 		return false;
