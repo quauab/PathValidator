@@ -4,7 +4,9 @@ import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
+/**	PathValidator<br>
+ *  Private constructor and 3 static methods that verifies a file, directory or general path exists and is not a symbolic link.
+ * */
 public class PathValidator {
 	/**Validates the path exists and is not a symbolic link.
 	 * @param filePath - String file or directory path
