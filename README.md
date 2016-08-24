@@ -10,4 +10,4 @@ Verify path is a file, directory or that the path exists and is not a symbolic l
 </ol>
 
 <h2>Motivation</h2>
-Inspired by previous projects that required file or directory verification. Uploaded ot Github as reference or possible Java library for others.
+Inspired by previous projects that required file or directory verification. Uploaded to Github as reference or possible Java library for others.
