@@ -96,5 +96,5 @@ public class PathValidatorTests {
 	@Test(expected = NullPointerException.class)
 	public void testIsAFileNullPathArgument() {
 		PathValidator.isAFile(Paths.get("").toString());
-	}
+	}	
 }
