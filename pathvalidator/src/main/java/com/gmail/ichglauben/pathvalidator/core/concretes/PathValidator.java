@@ -41,6 +41,7 @@ public class PathValidator {
 	
 	/**Verifies the path is a symbolic link
 	 * @param filePath String file or directory path
+	 * @return true if path is a symbolic link, false if otherwise
 	 * @throws NullPointerException if String argument is null or empty*/
 	public static boolean isSymbolic(String filePath) {
 		if (null == filePath || filePath.length() == 0)
@@ -51,5 +52,5 @@ public class PathValidator {
 	/**Private constructor*/
 	private PathValidator() {}
 	
-	public String toString() { return "Path (Directory or File) Validator"; }
+	public String toString() { return "Path Validator"; }
 }
