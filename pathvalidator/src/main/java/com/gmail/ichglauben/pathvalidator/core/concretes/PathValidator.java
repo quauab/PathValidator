@@ -14,7 +14,7 @@ public class PathValidator {
 	 * @return true if path exists and is not a symbolic link, false if otherwise
 	 * @throws NullPointerException if String argument is null or empty*/
 	public static boolean pathExists(String filePath) {
-		if (null == filePath || filePath.length() == 0)
+		if (null == filePath || filePath.length() == 0 || (null == Paths.get(filePath)))
 			throw new NullPointerException("File path argument is null or empty");		
 		return Files.exists(Paths.get(filePath), LinkOption.NOFOLLOW_LINKS);		
 	}
