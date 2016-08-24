@@ -24,7 +24,7 @@ public class PathValidator {
 	 * @return true if directory exists and is not a symbolic link, false if otherwise
 	 * @throws NullPointerException if String argument is null or empty*/
 	public static boolean isADirectory(String filePath) {
-		if (null == filePath || filePath.length() == 0)
+		if (null == filePath || filePath.length() == 0 || (null != Paths.get(filePath)))
 			throw new NullPointerException("File path argument is null or empty");
 		return Files.isDirectory(Paths.get(filePath), LinkOption.NOFOLLOW_LINKS);
 	}
@@ -34,7 +34,7 @@ public class PathValidator {
 	 * @return true if file exists and is not a symbolic link, false if otherwise
 	 * @throws NullPointerException if String argument is null or empty*/
 	public static boolean isAFile(String filePath) {
-		if (null == filePath || filePath.length() == 0)
+		if (null == filePath || filePath.length() == 0 || (null != Paths.get(filePath)))
 			throw new NullPointerException("File path argument is null or empty");
 		return Files.isRegularFile(Paths.get(filePath), LinkOption.NOFOLLOW_LINKS);
 	}
@@ -44,7 +44,7 @@ public class PathValidator {
 	 * @return true if path is a symbolic link, false if otherwise
 	 * @throws NullPointerException if String argument is null or empty*/
 	public static boolean isSymbolic(String filePath) {
-		if (null == filePath || filePath.length() == 0)
+		if (null == filePath || filePath.length() == 0 || (null != Paths.get(filePath)))
 			throw new NullPointerException("File path argument is null or empty");
 		return Files.isSymbolicLink(Paths.get(filePath));
 	}
