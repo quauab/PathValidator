@@ -13,4 +13,4 @@ Verify path is a file, directory or that the path exists and is not a symbolic l
 Inspired by previous projects that required file or directory verification. Uploaded to Github as reference or possible Java library for others.
 
 <h2>Notes</h2>
-The PathValidator methods will throw a NullPointerException if the String argument is null or empty.
+The PathValidator methods will throw a NullPointerException if it's String argument is null or empty.
