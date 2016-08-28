@@ -1,5 +1,5 @@
 # Path Validator
-Verify path is a file, directory or that the path exists and is not a symbolic link and verify a path, whether file or directory is a symbolic link.
+Verify path is a file, directory or that the path exists and is not a symbolic link or verify a path, whether file or directory is a symbolic link.
 
 <h2>Installation</h2>
 <ol>
